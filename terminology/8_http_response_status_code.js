@@ -17,8 +17,7 @@ Here are some common HTTP status codes that you may encounter in the MERN stack,
 
 In the MERN stack, you can set the status code of an HTTP response using the status() function provided by the Express.js framework. Here's an example:
 
-javascript
-Copy code
+
 app.get('/users/:id', (req, res) => {
   const userId = req.params.id;
 
