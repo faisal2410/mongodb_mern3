@@ -6,11 +6,13 @@ const router = require("./router");
 const productRouter=require("./productRouter")
 // const userRouter = require("./userRouter");
 
+
 app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(helmet());
 app.use(cookieParser());
+
 
 
 app.use("/", router);
