@@ -23,13 +23,15 @@ app.use("/product", productRouter);
 
 app.get('/set-cookie', (req, res) => {
     res.cookie('myCookie', 'hello world', { maxAge: 900000, httpOnly: true });
+    res.cookie('test', 'ostad', { maxAge: 900000, httpOnly: true });
     res.send('Cookie set!');
 });
 
 
 app.get('/get-cookie', (req, res) => {
     const myCookieValue = req.cookies.myCookie;
-    res.send(`Cookie value: ${myCookieValue}`);
+    const testValue = req.cookies.test;
+    res.send(`Cookie value: ${myCookieValue} and test value: ${testValue}` );
 });
 
 
